@@ -52,6 +52,7 @@ public class TaskController {
         return ResponseEntity.ok(task);
     }
 
+
     @ExceptionHandler(ParseException.class)
     public ResponseEntity<ErrorResponseDTO> handleErrors(Exception e) {
         if (e instanceof ParseException) {
